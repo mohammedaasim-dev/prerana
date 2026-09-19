@@ -1,0 +1,17 @@
+{
+  "name": "Prerana 2026",
+  "short_name": "Prerana",
+  "description": "Prerana 2026 Web Management Application",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4E4C9",
+  "theme_color": "#007367",
+  "icons": [
+    {
+      "src": "/icon_bg1.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

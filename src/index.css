@@ -1,0 +1,225 @@
+/* FONT IMPORTS GO HERE */
+/* Inter is loaded from Google Fonts; Forma DJR Display is a paid font and should
+  be self-hosted or added to the project assets if available. For now we set
+  the font-family fallback and load Inter for body text. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Forma DJR Display is a paid/display typeface — place WOFF2 files in /public/fonts
+   Files expected (example names):
+     /public/fonts/FormaDJRDisplay-Regular.woff2  (400)
+     /public/fonts/FormaDJRDisplay-Medium.woff2   (500)
+     /public/fonts/FormaDJRDisplay-Bold.woff2     (700)
+   If you don't host the files, the browser will fall back to Inter. */
+@font-face {
+  font-family: 'Forma DJR Display';
+  src: url('/fonts/FormaDJRDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Forma DJR Display';
+  src: url('/fonts/FormaDJRDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Forma DJR Display';
+  src: url('/fonts/FormaDJRDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* DO NOT CHANGE */
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+/* DO NOT CHANGE */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* CHANGE VALUES FOR THEME — GITAM palette */
+:root {
+  --radius: 0.625rem;
+  --background: #080C08;
+  --foreground: #FAFAFA;
+  --card: #080C08;
+  --card-foreground: #FAFAFA;
+  --popover: #080C08;
+  --popover-foreground: #FAFAFA;
+  --primary: #FFA51F;
+  --primary-foreground: #080C08;
+  --secondary: #CC0000;
+  --secondary-foreground: #FAFAFA;
+  --muted: #401268;
+  --muted-foreground: #FAFAFA;
+  --accent: #051B7F;
+  --accent-foreground: #FAFAFA;
+  --destructive: #CC0000;
+  --destructive-foreground: #FAFAFA;
+  --border: #401268;
+  --input: #401268;
+  --ring: #FFA51F;
+  --chart-1: #FFA51F;
+  --chart-2: #CC0000;
+  --chart-3: #051B7F;
+  --chart-4: #401268;
+  --chart-5: #FAFAFA;
+  --sidebar: #080C08;
+  --sidebar-foreground: #FAFAFA;
+  --sidebar-primary: #FFA51F;
+  --sidebar-primary-foreground: #080C08;
+  --sidebar-accent: #401268;
+  --sidebar-accent-foreground: #FAFAFA;
+  --sidebar-border: #401268;
+  --sidebar-ring: #FFA51F;
+  --gridline: #80808012; /* subtle grid pattern (old value preserved) */
+}
+
+.dark {
+  --radius: 0.625rem;
+  --background: #080C08;
+  --foreground: #FAFAFA;
+  --card: #080C08;
+  --card-foreground: #FAFAFA;
+  --popover: #080C08;
+  --popover-foreground: #FAFAFA;
+  --primary: #FFA51F;
+  --primary-foreground: #080C08;
+  --secondary: #CC0000;
+  --secondary-foreground: #FAFAFA;
+  --muted: #401268;
+  --muted-foreground: #FAFAFA;
+  --accent: #051B7F;
+  --accent-foreground: #FAFAFA;
+  --destructive: #CC0000;
+  --destructive-foreground: #FAFAFA;
+  --border: #401268;
+  --input: #401268;
+  --ring: #FFA51F;
+  --chart-1: #FFA51F;
+  --chart-2: #CC0000;
+  --chart-3: #051B7F;
+  --chart-4: #401268;
+  --chart-5: #FAFAFA;
+  --sidebar: #080C08;
+  --sidebar-foreground: #FAFAFA;
+  --sidebar-primary: #FFA51F;
+  --sidebar-primary-foreground: #080C08;
+  --sidebar-accent: #401268;
+  --sidebar-accent-foreground: #FAFAFA;
+  --sidebar-border: #401268;
+  --sidebar-ring: #FFA51F;
+  --gridline: #80808012;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    letter-spacing: 0em;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: Inter, system-ui, sans-serif;
+  }
+  .font-sans {
+    font-family: Inter, system-ui, sans-serif;
+  }
+  .font-serif {
+    font-family: Lora, Georgia, serif;
+  }
+  .font-mono {
+    font-family: Menlo, "Courier New", monospace;
+  }
+  /* Headings: use Forma DJR Display (display typeface) with explicit weights */
+  h1 {
+    font-family: "Forma DJR Display", Inter, system-ui, sans-serif;
+    font-weight: 700;
+  }
+  h2 {
+    font-family: "Forma DJR Display", Inter, system-ui, sans-serif;
+    font-weight: 700;
+  }
+  h3 {
+    font-family: "Forma DJR Display", Inter, system-ui, sans-serif;
+    font-weight: 500;
+  }
+  h4, h5, h6 {
+    font-family: "Forma DJR Display", Inter, system-ui, sans-serif;
+    font-weight: 400;
+  }
+
+  /* Body text: Inter for readability */
+  p, span, li, a, button, input, textarea {
+    font-family: Inter, system-ui, sans-serif;
+    font-weight: 400;
+  }
+
+  /* Strong/bold elements should use explicit bold token (brand bold) */
+  strong, b {
+    font-weight: 700;
+  }
+
+  /* Ensure headings' inline strong also use the Forma family */
+  h1 strong, h2 strong, h3 strong {
+    font-family: "Forma DJR Display", Inter, system-ui, sans-serif;
+    font-weight: 700;
+  }
+  /* Gridline background utility used across pages to replace inline hex gradients */
+  .bg-gridlines {
+    background-image: linear-gradient(to right, var(--gridline) 1px, transparent 1px), linear-gradient(to bottom, var(--gridline) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  /* Utility to hide native scrollbars while keeping scrolling functional */
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  /* Gallery marquee styles */
+  .marquee-track { display:flex; gap:1rem; align-items:center; }
+  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-25%); } }
+  .marquee-item { flex:0 0 auto; border-radius:0.5rem; overflow:hidden }
+  .marquee-item img { display:block }
+}
